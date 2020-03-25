@@ -40,7 +40,11 @@ pipeline {
         }
         stage('Test Kitchen') {
             steps {
-                sh 'sudo kitchen test'
+  		sh 'sudo kitchen destroy'
+		sh 'sudo kitchen create'
+		sh 'sudo kitchen converge'
+		sh 'sudo kitchen verify'
+
             }
         }
        /* stage('Upload to Chef Infra Server, Converge Nodes') {
