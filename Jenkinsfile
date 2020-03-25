@@ -26,7 +26,7 @@ pipeline {
 		git credentialsId: 'git-repo-creds', url: 'git@github.com:jcastrejona/webserver-cookbook.git'
             }
         }
-        /*stage('Install Kitchen Docker Gem') {
+        stage('Install Kitchen Docker Gem') {
             steps {
                 script {
                     def exists2 = fileExists '/usr/bin/kitchen'
@@ -37,7 +37,7 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
         /*stage('Test Kitchen') {
             steps {
                 sh 'sudo kitchen test'
