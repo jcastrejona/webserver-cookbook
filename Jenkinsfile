@@ -38,11 +38,11 @@ pipeline {
                 }
             }
         }
-        /*stage('Test Kitchen') {
+        stage('Test Kitchen') {
             steps {
                 sh 'sudo kitchen test'
             }
-        }*/
+        }
        /* stage('Upload to Chef Infra Server, Converge Nodes') {
             steps {
                 withCredentials([zip(credentialsId: 'chef-starter-zip', variable: 'CHEFREPO')]) {
